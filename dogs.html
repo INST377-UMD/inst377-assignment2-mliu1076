@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Assignment 2</title>
+        <link rel="stylesheet" href="core.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+        <script src="core.js" defer></script>
+        <script src="dogs.js" defer></script>
+    </head>
+
+    <body>
+        <header id="bar">
+            <h1> INST377 - Doggos</h1>
+        </header>
+
+        <nav id="main-nav">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="stocks.html">Stocks</a></li>
+                <li><a href="dogs.html">Dogs</a></li>
+            </ul>
+        </nav>
+        <h1>Doggos! &#128021;</h1>
+
+        <div class="content-area"> 
+            <div id='dogCarousel' style="width:800px; height:612px" data-simple-slider>
+
+            </div>
+        </div>
+
+        <div class="content-area"> 
+            <div id="buttons-container">
+
+            </div>
+        </div>
+        <div id="breed-info">
+
+        </div>
+
+
+        <div class="content-area">
+            <div class="listening-area"> 
+                <h1>In this web page there are options to Navigate using Audio!</h1>
+                <h2>Ensure your Mic is enabled to be ale to use this feature</h2>
+                <h3>
+                    <ul>
+                        <li>Load Dog Breed Information</li>
+                        <ul>
+                            <li>Say: <b>Load Dog Breed &lt;Dog Breed Name&gt;</b></li>
+                        </ul>
+                        <li>Navigate to a different Page</li>
+                        <ul>
+                            <li>Say: <b>Navigate to &lt;page&gt;</b></li>
+                        </ul>
+                        <li>Change the Page Color</li>
+                        <ul>
+                            <li>Say: <b>Change the color to &lt;color&gt;</b></li>
+                        </ul>
+                        <li>Say Hello Back to you!</li>
+                        <ul>
+                            <li>Say: <b>Hello<b></b></li>
+                        </ul>
+                      </ul>
+                </h3>
+                <div id=buttons>
+                    <button id="button-start" onclick="startListen()">Turn On Listening</button>
+                    <button id="button-stop" onclick="stopListen()">Turn Off Listening</button>  
+                </div>              
+            </div>
+
+
+    </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stocks</title>
+    <link rel="stylesheet" href="core.css">
+    <script src="stocks.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+</head>
+
+<body>
+    <h1>INST377 - Stocks</h1>
+    <nav id="main-nav"> <!-- Navigation Bar -->
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="stocks.html">Stocks</a></li>
+            <li><a href="dogs.html">Dogs</a></li>
+        </ul>
+    </nav>
+    <div id="stock-container">
+        <form id="stock-form" onsubmit="polygonLookup(event)" method="post">
+            <input required type="text" id="stock-input" placeholder="Enter stock ticker" maxlength="5">
+            <select id="day-number">
+                <option value="30">30 Days</option>
+                <option value="60">60 Days</option>
+                <option value="90">90 Days</option>
+            </select>
+            <input type="submit" value="Lookup!">
+        </form>
+    </div>
+
+    <div id="chartDiv" style="background-color: white;display: none;">
+        <canvas id="my-chart"></canvas>
+    </div>
+
+    <div id="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>TICKER</th>
+                    <th>COMMENT COUNT</th>
+                    <th>SENTIMENT</th>
+                </tr>
+            </thead>
+            <tbody id="stock-table-area">
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <div class="listening-area"> <!-- Audio div -->
+        <h1>In this web page there are options to Navigate using Audio!</h1>
+        <h2>Ensure your Mic is enabled to be ale to use this feature</h2>
+        <h3>
+            <ul>
+                <li>Navigate to a different Page</li>
+                <ul>
+                    <li>Say: <b>Navigate to &lt;page&gt;</b></li>
+                </ul>
+                <li>Change the Page Color</li>
+                <ul>
+                    <li>Say: <b>Change the color to &lt;color&gt;</b></li>
+                </ul>
+                <li>Say Hello Back to you!</li>
+                <ul>
+                    <li>Say: <b>Hello</b></li>
+                </ul>
+              </ul>
+        </h3>
+        <div id=buttons>
+            <button id="button-start" onclick="startListen()">Turn On Listening</button>
+            <button id="button-stop" onclick="stopListen()">Turn Off Listening</button>  
+        </div>
+           
+                        
+    </div>
+
+</html>
